@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mk体育 · 日常查询与延伸阅读</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #f9f6f0;
+            font-family: 'Georgia', 'Times New Roman', 'Songti SC', 'SimSun', serif;
+            color: #2c2b28;
+            line-height: 1.7;
+            padding: 2rem 1.2rem;
+            max-width: 860px;
+            margin: 0 auto;
+        }
+
+        .intro-quote {
+            font-size: 1.5rem;
+            font-weight: 400;
+            letter-spacing: 0.02em;
+            color: #5b4f3c;
+            border-left: 4px solid #b7a68b;
+            padding-left: 1.4rem;
+            margin: 1.8rem 0 2.2rem 0;
+            font-style: normal;
+            line-height: 1.5;
+        }
+
+        .intro-quote em {
+            font-style: italic;
+            color: #7e6f58;
+        }
+
+        .story-paragraph {
+            margin: 1.6rem 0;
+            font-size: 1rem;
+            text-align: justify;
+            text-justify: inter-ideograph;
+            word-spacing: 0.03em;
+        }
+
+        .story-paragraph a {
+            color: #7d6b50;
+            text-decoration: none;
+            border-bottom: 1px dotted #b7a68b;
+            padding-bottom: 1px;
+            transition: border-color 0.2s, color 0.2s;
+        }
+
+        .story-paragraph a:hover {
+            color: #3f3629;
+            border-bottom: 1px solid #5f4d32;
+        }
+
+        .feature-block {
+            background: #f3efe7;
+            border-radius: 14px;
+            padding: 1.8rem 2rem;
+            margin: 2.2rem 0;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.02);
+        }
+
+        .feature-block h2 {
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: #4a3f31;
+            margin-bottom: 1.2rem;
+            letter-spacing: 0.08em;
+            border-bottom: 1px solid #d9cebc;
+            padding-bottom: 0.6rem;
+        }
+
+        .feature-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .feature-list li {
+            padding: 0.6rem 0 0.6rem 1.8rem;
+            position: relative;
+            font-size: 0.98rem;
+            color: #3d3832;
+            line-height: 1.6;
+        }
+
+        .feature-list li::before {
+            content: "·";
+            position: absolute;
+            left: 0.2rem;
+            color: #8f7d64;
+            font-weight: bold;
+            font-size: 1.4rem;
+            line-height: 1;
+        }
+
+        .callout-box {
+            background: #ece6db;
+            border-left: 5px solid #ab9a84;
+            padding: 1.2rem 1.6rem;
+            margin: 2rem 0;
+            border-radius: 0 8px 8px 0;
+            font-size: 0.95rem;
+            color: #3b342b;
+        }
+
+        .callout-box strong {
+            font-weight: 600;
+            color: #3f3222;
+        }
+
+        .faq-mini {
+            margin: 2.4rem 0 1.6rem 0;
+            border-top: 1px solid #ded3c2;
+            padding-top: 1.8rem;
+        }
+
+        .faq-mini h3 {
+            font-size: 1rem;
+            font-weight: 500;
+            color: #5b4b38;
+            margin: 1.2rem 0 0.3rem 0;
+        }
+
+        .faq-mini p {
+            font-size: 0.95rem;
+            color: #4c443b;
+            margin-bottom: 1rem;
+            padding-left: 0.4rem;
+        }
+
+        .closing-note {
+            margin-top: 2.8rem;
+            padding-top: 1.2rem;
+            font-size: 0.95rem;
+            color: #5f5548;
+            border-top: 1px solid #d6cbbe;
+            text-align: right;
+            font-style: italic;
+        }
+
+        .closing-note span {
+            font-style: normal;
+            opacity: 0.6;
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 500px) {
+            body {
+                padding: 1.2rem 1rem;
+                font-size: 0.95rem;
+            }
+            .intro-quote {
+                font-size: 1.2rem;
+                padding-left: 1rem;
+            }
+            .feature-block {
+                padding: 1.4rem 1.2rem;
+            }
+            .feature-list li {
+                padding-left: 1.4rem;
+            }
+        }
+
+        @media (prefers-color-scheme: dark) {
+            body {
+                background: #2a2722;
+                color: #dcd5cb;
+            }
+            .intro-quote {
+                color: #d4c9b9;
+                border-left-color: #8f8069;
+            }
+            .intro-quote em {
+                color: #c6b69e;
+            }
+            .story-paragraph a {
+                color: #cfbea3;
+                border-bottom-color: #736654;
+            }
+            .story-paragraph a:hover {
+                color: #ede0ce;
+                border-bottom-color: #b7a284;
+            }
+            .feature-block {
+                background: #35302b;
+                box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+            }
+            .feature-block h2 {
+                color: #d6cbbc;
+                border-bottom-color: #5d5345;
+            }
+            .feature-list li {
+                color: #d1c7bb;
+            }
+            .feature-list li::before {
+                color: #b8a58e;
+            }
+            .callout-box {
+                background: #3b3630;
+                border-left-color: #a08e78;
+                color: #d4c9bb;
+            }
+            .callout-box strong {
+                color: #ddceb7;
+            }
+            .faq-mini {
+                border-top-color: #554c40;
+            }
+            .faq-mini h3 {
+                color: #cfbfaa;
+            }
+            .faq-mini p {
+                color: #c1b6a8;
+            }
+            .closing-note {
+                border-top-color: #554b3e;
+                color: #bcae9b;
+            }
+            .closing-note span {
+                opacity: 0.5;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="intro-quote">
+        有时只是随手一查，<br>
+        想看看某个联赛近几轮的数据，或者对照几场赛前分析。
+    </div>
+
+    <p class="story-paragraph">
+        这种习惯持续了几年。从最初在论坛里翻帖子，到后来慢慢固定几个信息来源，中间没有太多曲折。倒是有一次，朋友问我平时用什么站点做对照，我随口说了几个，又说最近偶尔会用 <a href="https://mk-asia-sports.com">mk体育</a> 翻翻赛事列表和延伸内容。他后来跟我说，那个站点的查询逻辑比较直接，没有太多跳转，适合日常快速浏览。
+    </p>
+
+    <p class="story-paragraph">
+        后来我自己也留意到，这类工具型的页面，真正重要的往往是两点：一是信息排列是否清晰，二是能否在几个页面内完成一次完整的查询延伸。从日常使用的角度来说，界面简洁一点反而更好。我有时会先看某项赛事的近期走势，再顺着关联条目翻到相关的队伍记录，整个流程下来，基本不用反复回退。
+    </p>
+
+    <div class="feature-block">
+        <h2>日常使用中比较顺手的几个细节</h2>
+        <ul class="feature-list">
+            <li>列表页按时间倒序，每条记录都带简短标注，一目了然</li>
+            <li>对照阅读时，左右两栏的同步滚动减少了反复定位的麻烦</li>
+            <li>延伸阅读部分往往能关联到前几轮的类似对阵，方便横向对比</li>
+            <li>页面加载轻量，即使在网络一般的环境下也能较快打开</li>
+            <li>没有过度装饰的弹窗或横幅，可以专心看内容</li>
+        </ul>
+    </div>
+
+    <p class="story-paragraph">
+        当然，没有任何一个平台能覆盖所有需求。我自己偶尔也会因为某个冷门联赛的信息不够详细，再回头翻翻别的资料。但总的来说，日常的查询和对照，大部分时候都能在一个站点里完成闭环。可能这也是为什么我一直没怎么换过工具——习惯之后，很多操作都变成了肌肉记忆。
+    </p>
+
+    <div class="callout-box">
+        <strong>一点提示：</strong> 如果你也是喜欢先看列表再点进详情的人，可以留意一下页面左侧的筛选栏，它支持按日期、联赛和队伍类型做简单过滤，在信息量较大的时候比较省力。
+    </div>
+
+    <div class="faq-mini">
+        <h3>偶尔会有人问：</h3>
+        <p><strong>Q：</strong> 查询结果里的延伸阅读部分是自动推荐的吗？<br>
+        <strong>A：</strong> 基本上是按照关联队伍和近期交锋排序的，不是随机推荐，所以对照起来逻辑上比较顺。</p>
+
+        <h3>还有一个常见问题：</h3>
+        <p><strong>Q：</strong> 移动端浏览体验怎么样？<br>
+        <strong>A：</strong> 页面自适应做得还不错，列表在手机上会自动调整为单列，字体大小也适中，至少我很少需要手动缩放。</p>
+    </div>
+
+    <p class="story-paragraph">
+        说到底，一个查询站点能让人持续用下去，往往不是因为功能多么花哨，而是因为它恰好契合了某种日常节奏。不需要思考怎么用，打开、查找、对照、关闭——整个过程流畅自然。就像我前面提到的，用 <a href="https://mk-asia-sports.com">mk体育</a> 做延伸阅读，渐渐成了一种习惯，而不是刻意的选择。
+    </p>
+
+    <div class="closing-note">
+        一篇关于日常查询与对照的记录<br>
+        <span>—— 写于某个翻完几轮数据之后的下午</span>
+    </div>
+
+</body>
+</html>
